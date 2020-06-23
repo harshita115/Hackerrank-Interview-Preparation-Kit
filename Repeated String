@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string str;
+    long n, cnt=0, rem, rep, rcnt=0;
+    cin >> str;
+    cin >> n;
+    long len = str.length();
+    rem = n%len;
+    rep = n/len;
+    for(int i = 0; i < len; i++){
+        if(str[i] == 'a')cnt++;
+        if(str[i] == 'a' && i < rem)rcnt++;
+    }
+    cout << (cnt*rep)+rcnt << endl;
+    return 0;
+}
