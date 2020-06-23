@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    int n;
+    int pos = 0, step = n - 1, jumps = 0;
+    cin>>n;
+    int c[n];
+    for(int i=0;i<n;i++)
+    {
+       cin>>c[i];
+    }
+    
+    while(currentPosition < lastCloud )
+    {
+        if(currentPosition + 1 == lastCloud)
+            currentPosition++;
+        else if( c[ currentPosition + 2] == 0)
+            currentPosition = currentPosition + 2;
+        else
+            currentPosition++;
+        jumps++;
+    }
+    cout<<jumps;
+    return 0;
+}
